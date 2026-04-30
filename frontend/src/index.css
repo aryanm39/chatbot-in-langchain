@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-surface:       #f8f9fb;
+  --color-surface-hover: #f1f3f6;
+  --color-border:        #e2e6ea;
+  --color-ink:           #1a1d23;
+  --color-ink-muted:     #7a8394;
+  --color-ink-faint:     #c4cbd6;
+  --color-accent:        #2563eb;
+  --color-accent-light:  #eff4ff;
+  --color-ok:            #16a34a;
+  --color-err:           #dc2626;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #7a8394;
+  animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dot:nth-child(1) { animation-delay: 0s; }
+.dot:nth-child(2) { animation-delay: 0.2s; }
+.dot:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); opacity: 0.4; }
+  40%           { transform: translateY(-6px); opacity: 1; }
+}
